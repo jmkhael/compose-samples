@@ -1,2 +1,10 @@
 # compose-samples
-# compose-samples
+This repository contains some sample Compose file mostly used to deploy some stack, like for Docker Swarm monitoring, elk or some other.
+
+## Docker Swarm monitoring stack
+
+This stack is composed of two service wich I tend to always create first on a Swarm:
+* the [Visualizer](https://github.com/ManoMarks/docker-swarm-visualizer) and 
+* [Portainer](http://portainer.io)
+
+
