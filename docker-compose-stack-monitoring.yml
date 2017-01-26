@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  portainer:
+    image: portainer/portainer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 9000:9000
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+
+  viz:
+    image: manomarks/visualizer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    ports:
+      - 9090:8080
+
